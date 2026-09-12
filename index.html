@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocs Store - Toko Crocs</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f1f8f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 17px;
+        }
+
+        nav {
+            background-color: #056b4d;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            width: 85%;
+            margin: 30px auto;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #087f5b;
+            margin-top: 0;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        /* PRODUK */
+        .produk-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .produk-card {
+            width: 280px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .produk-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .produk-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: contain;
+            background-color: #f8f8f8;
+        }
+
+        .produk-info {
+            padding: 18px;
+        }
+
+        .produk-info h3 {
+            margin-top: 0;
+            color: #087f5b;
+        }
+
+        .harga {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e8590c;
+        }
+
+        .status {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* TABEL */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #000080 ;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        /* FORM */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 11px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #087f5b;
+            color: white;
+            border: none;
+            padding: 13px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #056b4d;
+        }
+
+        footer {
+            background-color: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🩴 Crocs Store </h1>
+        <p>Crocs Store Pilihan dengan Model Unik dan Nyaman</p>
+    </header>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="#tentang">Tentang Kami</a>
+        <a href="#produk">Produk</a>
+        <a href="#pesan">Pesan</a>
+    </nav>
+
+    <main>
+
+        <!-- TENTANG -->
+        <section id="tentang">
+            <h2>Tentang Crocs </h2>
+
+            <p>
+                Crocs Store adalah toko online yang menyediakan berbagai
+                pilihan sandal Crocs dengan desain menarik, nyaman digunakan,
+                dan cocok untuk berbagai aktivitas.
+            </p>
+
+            <p>
+                Kami menyediakan berbagai model seperti Crocs bertema
+                Spider-Man, SpongeBob, Stitch, dan model lainnya.
+            </p>
+
+            <h3>Keunggulan Kami:</h3>
+
+            <ul>
+                <li>Produk dengan desain menarik</li>
+                <li>Nyaman digunakan sehari-hari</li>
+                <li>Harga terjangkau</li>
+                <li>Pelayanan cepat</li>
+                <li>Pengiriman ke berbagai daerah</li>
+            </ul>
+        </section>
+
+
+        <!-- PRODUK -->
+        <section id="produk">
+            <h2>🛍️ Produk Crocs</h2>
+
+            <div class="produk-container">
+
+                <!-- SPIDERMAN -->
+                <div class="produk-card">
+
+                    <img
+                        src="https://assets.rackroomshoes.com/image/upload/b_rgb%3Affffff%2Cc_pad%2Ch_ih%2Cq_auto/US_01_117848_00"
+                        alt="Crocs Spider-Man">
+
+                    <div class="produk-info">
+                        <h3>Crocs Spider-Man</h3>
+
+                        <p>
+                            Crocs dengan desain Spider-Man yang keren
+                            dan cocok untuk penggemar superhero.
+                        </p>
+
+                        <p class="harga">Rp1.199.000</p>
+
+                        <p class="status">✓ Tersedia</p>
+                    </div>
+
+                </div>
+
+
+                <!-- SPONGEBOB -->
+                <div class="produk-card">
+
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0603/3031/1875/files/209824-7HD_sivasdescalzo-Crocs-SPONGEBOB_CLASSIC_CLOG_U-1715694293-1_C3_83_C2_A6_C3_82_C2_8B_C3_82_C2_B7_C3_83_C2_A8_C3_82_C2_B2_C3_82_C2_9D-square_3840x.jpg?v=1716274220"
+                        alt="Crocs SpongeBob">
+
+                    <div class="produk-info">
+                        <h3>Crocs SpongeBob</h3>
+
+                        <p>
+                            Crocs dengan desain SpongeBob yang
+                            unik, ceria, dan cocok untuk sehari-hari.
+                        </p>
+
+                        <p class="harga">Rp1.199.000</p>
+
+                        <p class="status">✓ Tersedia</p>
+                    </div>
+
+                </div>
+
+
+                <!-- STITCH -->
+                <div class="produk-card">
+
+                    <img
+                        src="https://www.sportmaniac.ro/53518-product_page/saboti-crocs-classic-disney-stitch-clog.jpg"
+                        alt="Crocs Stitch">
+
+                    <div class="produk-info">
+                        <h3>Crocs Stitch</h3>
+
+                        <p>
+                            Crocs bertema Stitch dengan tampilan
+                            lucu dan cocok untuk berbagai aktivitas.
+                        </p>
+
+                        <p class="harga">Rp1.199.000</p>
+
+                        <p class="status">✓ Tersedia</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TABEL -->
+        <section>
+            <h2>📋 Daftar Produk</h2>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Produk</th>
+                    <th>Kategori</th>
+                    <th>Harga</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Crocs Spider-Man</td>
+                    <td>Character</td>
+                    <td>Rp1.199.000</td>
+                    <td>Tersedia</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Crocs SpongeBob</td>
+                    <td>Character</td>
+                    <td>Rp1.199.000</td>
+                    <td>Tersedia</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Crocs Stitch</td>
+                    <td>Disney</td>
+                    <td>Rp1.199.000</td>
+                    <td>Tersedia</td>
+                </tr>
+            </table>
+        </section>
+
+
+       <!-- FORM PESAN -->
+<section id="pesan">
+
+    <h2>📝 Form Pemesanan</h2>
+
+    <form id="formPemesanan">
+
+        <label for="nama">Nama Lengkap</label>
+        <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama lengkap"
+            required
+        >
+
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="contoh@email.com"
+            required
+        >
+
+        <label for="telepon">Nomor Telepon</label>
+        <input
+            type="tel"
+            id="telepon"
+            name="telepon"
+            placeholder="08xxxxxxxxxx"
+            required
+        >
+
+        <label for="produk">Pilih Produk</label>
+
+        <select id="produk" name="produk" required>
+            <option value="">-- Pilih Crocs --</option>
+            <option value="Crocs Spider-Man">Crocs Spider-Man</option>
+            <option value="Crocs SpongeBob">Crocs SpongeBob</option>
+            <option value="Crocs Stitch">Crocs Stitch</option>
+        </select>
+
+        <label for="jumlah">Jumlah</label>
+
+        <input
+            type="number"
+            id="jumlah"
+            name="jumlah"
+            min="1"
+            placeholder="Masukkan jumlah"
+            required
+        >
+
+        <label for="alamat">Alamat Pengiriman</label>
+
+        <textarea
+            id="alamat"
+            name="alamat"
+            rows="5"
+            placeholder="Masukkan alamat lengkap"
+            required
+        ></textarea>
+
+        <button type="submit">
+            🛒 Pesan Sekarang
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- TABEL DATA PELANGGAN -->
+<section id="hasilPesanan">
+
+    <h2>📋 Data Pemesanan Pelanggan</h2>
+
+    <table id="tabelPelanggan">
+
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Pelanggan</th>
+                <th>Email</th>
+                <th>No. Telepon</th>
+                <th>Produk</th>
+                <th>Jumlah</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+
+        <tbody id="dataPelanggan">
+        </tbody>
+
+    </table>
+
+</section>
+
+
+    </main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Crocs Hub</p>
+    <p>Toko Crocs Online - Nyaman, Unik, dan Stylish</p>
+<footer>
+    <p>© 2026 Crocs Hub</p>
+    <p>Toko Crocs Online - Nyaman, Unik, dan Stylish</p>
+</footer>
+
+<script src="css/java script/script.js"></script>
+
+</body>
+</html>
